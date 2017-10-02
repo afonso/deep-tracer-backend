@@ -29,7 +29,6 @@ Express server listening on http://0.0.0.0:9000, in development mode
 ```
 
 ### Example of POST
-
 ```
 POST: http://localhost:9000/tracers
 BODY: application/json
@@ -65,6 +64,7 @@ BODY: application/json
 }
 ```
 
+### Example of GET
 ```
 GET: http://localhost:9000/tracers/59d269b9ba5a4022144cd6eb
 ```
