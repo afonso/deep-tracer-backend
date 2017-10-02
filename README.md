@@ -28,6 +28,46 @@ $ npm run dev
 Express server listening on http://0.0.0.0:9000, in development mode
 ```
 
+### Example of POST
+
+```
+POST: http://localhost:9000/tracers
+BODY: application/json
+{
+    "id": "73b4afbf-91c1-4b10-a4d0-fab083827948",
+    "parentId": "770b80bb-2a77-406d-b7bc-d00cb2dbf4b8",
+    "contextId": "770b80bb-2a77-406d-b7bc-d00cb2dbf4b8",
+    "request": {
+        "ip": "::ffff:127.0.0.1",
+        "method": "GET",
+        "url": "http://localhost:3001/",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "x-parent-request-id": "770b80bb-2a77-406d-b7bc-d00cb2dbf4b8",
+            "x-request-context-id": "770b80bb-2a77-406d-b7bc-d00cb2dbf4b8",
+            "user-agent": "axios/0.16.2",
+            "host": "localhost:3002",
+            "connection": "close"
+        }
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "x-powered-by": "Express",
+            "x-request-id": "73b4afbf-91c1-4b10-a4d0-fab083827948",
+            "x-parent-request-id": "770b80bb-2a77-406d-b7bc-d00cb2dbf4b8",
+            "x-request-context-id": "770b80bb-2a77-406d-b7bc-d00cb2dbf4b8"
+        },
+        "body": "hello world!"
+    },
+    "startedAt": 1506713597922,
+    "finishedAt": 1506713597951
+}
+```
+
+```
+GET: http://localhost:9000/tracers/59d269b9ba5a4022144cd6eb
+```
 ## Directory structure
 
 ### Overview
